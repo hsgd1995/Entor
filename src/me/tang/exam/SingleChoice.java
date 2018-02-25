@@ -4,7 +4,7 @@ package me.tang.exam;
  * 单选题
  * 
  * @author Administrator
- *
+ * 
  */
 public class SingleChoice extends Question {
 	private String[] options;
@@ -16,13 +16,22 @@ public class SingleChoice extends Question {
 		this.options = options;
 	}
 
+	/**
+	 * 检验标准答案
+	 */
 	@Override
 	public boolean check(char[] answers) {
+		//如果数组长度不等于1，返回false
+		if(answers.length!=1){
+			return false;
+		}
+		//判断输入的答案与正确答案是否相等
+		if(answer == answers[0]){
+			return true;
+		}
 		return false;
-
 	}
-	
-	
+
 	public String[] getOptions() {
 		return options;
 	}
