@@ -18,7 +18,7 @@ public class SingleTest {
 		System.out.println("");
 		System.out.println("请输入正确答案：");
 		Scanner scanner = new Scanner(System.in);
-		char[] answer = scanner.nextLine().trim().toCharArray();
+		char[] answer = scanner.nextLine().trim().toUpperCase().toCharArray();
 		//调用单选题检验正确答案的方法
 		if (s.check(answer)) {
 			System.out.println("回答正确！");

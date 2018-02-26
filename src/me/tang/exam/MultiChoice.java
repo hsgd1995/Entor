@@ -24,6 +24,8 @@ public class MultiChoice extends Question {
 	 */
 	@Override
 	public boolean check(char[] answers) {
+		Arrays.sort(answers);
+		Arrays.sort(this.answers);
 		//如果数组为空，或者长度小于0，或者长度不等于正确答案数组长度，则return false
 		if (answers == null || answers.length <= 0
 				|| answers.length != this.answers.length) {
